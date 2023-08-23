@@ -18,5 +18,5 @@ RUN pecl install swoole
 
 RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli && \
     docker-php-ext-install gd && docker-php-ext-enable gd && \
-    docker-php-ext-enable swoole && docker-php-ext-enable swoole_loader
+    docker-php-ext-enable swoole
     
