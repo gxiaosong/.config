@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+    wordpress:
+        container_name: php-apache
+        build:
+            context: ./php7.4
+            dockerfile: Dockerfile
+        volumes:
+            - ./src:/var/www/html/
+        ports:
+            - 8080:80
