@@ -15,8 +15,10 @@ COPY ./swoole_loader_74_nts.so /usr/local/lib/php/extensions/no-debug-non-zts-20
 RUN echo 'extension=swoole_loader_74_nts.so' >> /usr/local/etc/php/php.ini
 
 RUN mv /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf.bak
+RUN mv /etc/apache2/apache2.conf /etc/apache2/apache2.conf.bak
 
 COPY ./000-default.conf /etc/apache2/sites-available
+COPY ./apache2.conf /etc/apache2/
 
 # RUN pecl install swoole
 
